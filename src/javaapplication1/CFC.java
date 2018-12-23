@@ -92,49 +92,49 @@ public class CFC {
      * @param args *
      */
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+        //Scanner scan = new Scanner(System.in);
         CFC cfc = new CFC();
 
-        System.out.println("Informe o numero de vértices");
+        //System.out.println("Informe o numero de vértices");
         /**
-         * Numero de Vertices
-         * Testei com 8
+         * Numero de Vertices Testei com 8
          */
-        int Vertices = scan.nextInt();
+        //int Vertices = scan.nextInt();
+        int Vertices = 8;
         List<Integer>[] g = new List[Vertices];
         for (int i = 0; i < Vertices; i++) {
             g[i] = new ArrayList<Integer>();
         }
 
-        System.out.println("\nInforme a quantidade de arestas");
-        int Arestas = scan.nextInt();
+        //System.out.println("\nInforme a quantidade de arestas");
+        //int Arestas = scan.nextInt();
+        int Arestas = 14;
         /**
-         * Quantidade de arestas 
-         * Testei com 14
+         * Quantidade de arestas Testei com 14
          */
-        System.out.println("Insira " + Arestas + " x, y cordenadas para as arestas");
-        for (int i = 0; i < Arestas; i++) {
-            int x = scan.nextInt();
-            int y = scan.nextInt();
-            /**
-             * Adicionando arestas 
-             * 0 1 
-             * 1 2 
-             * 2 3 
-             * 3 2 
-             * 3 7 
-             * 7 3 
-             * 2 6 
-             * 7 6 
-             * 5 6 
-             * 6 5 
-             * 1 5
-             * 4 5 
-             * 4 0 
-             * 1 4
-             */
-            g[x].add(y);
-        }
+        System.out.println("Inserindo " + Arestas + " x, y cordenadas para as arestas");
+        //for (int i = 0; i < Arestas; i++) {
+        //    int x = scan.nextInt();
+        //    int y = scan.nextInt();
+
+        // Adicionando arestas 
+        g[0].add(1);
+        g[1].add(2);
+        g[2].add(3);
+        g[3].add(2);
+        g[3].add(7);
+        g[7].add(3);
+        g[2].add(6);
+        g[7].add(6);
+        g[5].add(6);
+        g[6].add(5);
+        g[1].add(5);
+        g[4].add(5);
+        g[4].add(0);
+        g[1].add(4);
+
+        //g[x].add(y);
+        // }
         System.out.println("\nComponetes F Conexas : ");
         /**
          * Mostrando os resutados*
